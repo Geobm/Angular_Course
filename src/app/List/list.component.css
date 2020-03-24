@@ -1,0 +1,17 @@
+.select
+{
+    cursor: pointer;
+}
+
+.cars{
+
+   list-style: none;
+    background-color:rgb(132, 169, 172);
+    margin: 8px;
+    padding: 10px;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: right;
+    font-size: medium;
+    
+}

@@ -1,0 +1,27 @@
+<ng-container *ngFor="let car of cars">
+	<div class="cars">
+		<div class="fas fa-eye" (click)="onSelect(car,infAuto)"></div>
+		<div>{{car.description}} </div>
+	</div>
+</ng-container>
+
+<ng-template #infAuto let-modal>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="modal-basic-title">Selected Car</h4>
+				<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+                </button>
+			</div>
+			<div class="modal-body">
+				<label>Model: {{selectedCar.model}}</label>
+				<br/>
+				<label>Brand: {{selectedCar.brand}}</label>
+				<br/>
+				<label>Sub brand: {{selectedCar.sub_brand}}</label>
+				<label>Registration date: {{selectedCar.registration_date}}</label>
+			</div>
+		</div>
+	</div>
+</ng-template>

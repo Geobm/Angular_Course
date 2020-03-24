@@ -8,10 +8,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color :saddlebrown;
+    background-color : rgb(32, 64, 81);;
     color: white;
 }
 img
 {
     margin: 10px 10px 10px 10px;
+    border-radius: 0%;
 }
