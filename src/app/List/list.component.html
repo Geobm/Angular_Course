@@ -1,7 +1,7 @@
 <ng-container *ngFor="let car of cars">
 	<div class="cars">
 		<div class="fas fa-eye" (click)="onSelect(car,infAuto)"></div>
-		<div>{{car.description}} </div>
+		<div>{{car.descripcion}} </div>
 	</div>
 </ng-container>
 
@@ -15,12 +15,11 @@
                 </button>
 			</div>
 			<div class="modal-body">
-				<label>Model: {{selectedCar.model}}</label>
+				<label>Modelos: {{selectedCar.modelos}}</label>
 				<br/>
-				<label>Brand: {{selectedCar.brand}}</label>
+				<label>Marca: {{selectedCar.marca}}</label>
 				<br/>
-				<label>Sub brand: {{selectedCar.sub_brand}}</label>
-				<label>Registration date: {{selectedCar.registration_date}}</label>
+				<label>Sub Marca: {{selectedCar.submarca}}</label>
 			</div>
 		</div>
 	</div>
