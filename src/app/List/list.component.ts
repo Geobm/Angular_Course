@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Car }from '../model';
-import {CARS }from '../data';
 import { NgbModal,  ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { CarsService } from '../Services/cars.service';
 
 @Component({
   selector: 'app-list',
@@ -14,14 +14,18 @@ export class ListComponent implements OnInit {
   selectedCar: Car;
   closeResult = '';
 
-  constructor(private modalService : NgbModal) { }
+  constructor(private modalService : NgbModal, private carService: CarsService) { }
 
   ngOnInit() {
+    
     this.getCars();
   }
 
   getCars(): void {
-    this.cars = CARS;
+    
+    this.carService.getCars().subscribe((carsTemp)=>{
+      this.cars = carsTemp.data;
+    })
   }
 
   onSelect(car: Car, content): void {
@@ -48,7 +52,4 @@ export class ListComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
-
-  
-
 }
