@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
   providedIn : 'root'
 })
 export class CarsService {
-  private CarURL = 'https://catalogo-autos.herokuapp.com/api/autos/limit/5';
+  private CarURL = 'https://catalogo-autos.herokuapp.com/api/autos/limit/300';
+  private CarActionURL = 'https://catalogo-autos.herokuapp.com/api/autos';
 
   constructor(private http: HttpClient) { }
 
@@ -15,5 +16,17 @@ export class CarsService {
 
    return this.http.get<any>(this.CarURL);
    
+ }
+
+ updateCars(car:Car): Observable <any>{
+   return this.http.put<any>(`${this.CarActionURL}/${car._id}`, car);
+ }
+
+ addCars(car : Car): Observable<any>{
+   return this.http.post<any>(this.CarActionURL,car);
+ }
+
+ deleteCars(car : Car): Observable<any>{
+   return this.http.delete<any>(`${this.CarActionURL}/${car._id}`);
  }
 }
