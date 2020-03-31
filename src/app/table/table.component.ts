@@ -77,7 +77,6 @@ openModalConfirmDelete(car :Car) {
     );
 }
   getCars(): void {
-    
     this.carService.getCars().subscribe((response)=>{
       setTimeout(() => { 
       this.displayProgressBar = false;
