@@ -20,7 +20,6 @@
 					</ngb-progressbar>
 				</th>
 			</tr>
-
 			<tr *ngFor="let car of cars | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
 				<td>{{ car._id}}</td>
 				<td>{{ car.marca }}</td>
