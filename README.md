@@ -1,5 +1,7 @@
 # Angular_Course
 
+This repository is part of the outcome from the [CDIS Front-end](https://github.com/pedro-deleon/angular-capacitacion-online) training
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
 ## Development server
