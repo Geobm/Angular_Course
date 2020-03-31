@@ -24,3 +24,4 @@ import { ModelsFormatPipe } from './models-format.pipe';
   entryComponents : [ModalAddUpdateComponent,ModalConfirmActionComponent,ModalAddCarComponent]
 })
 export class AppModule { }
+ 
