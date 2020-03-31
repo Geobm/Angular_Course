@@ -3,14 +3,11 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Car } from '../model';
 
 @Component({
-  selector: 'app-modal-add-update',
-  templateUrl: './modal-add-update.component.html',
-  styleUrls: ['./modal-add-update.component.css']
+  selector: 'app-modal-add-car',
+  templateUrl: './modal-add-car.component.html',
+  styleUrls: ['./modal-add-car.component.css']
 })
-export class ModalAddUpdateComponent {
-
-action: string;
+export class ModalAddCarComponent {
 car : Car;
   constructor(public activeModal: NgbActiveModal) { }
-
 }
