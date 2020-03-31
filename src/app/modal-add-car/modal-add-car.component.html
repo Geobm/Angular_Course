@@ -1,6 +1,6 @@
 <form>
   <div class="modal-header">
-	<h4 class="modal-title" id="modal-basic-title">Agregar</h4>
+	<h4 class="modal-title" id="modal-basic-title">Edit</h4>
 	<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('cross click')">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -9,22 +9,22 @@
 <div class="modal-body">
 	<div class="form-group">
 		<label for ="marca">Marca</label>
-		<input type="text" class="form-control" id="brand" placeholder="Agrega la marca" name = "marca">
+		<input type="text" class="form-control" id="brand" placeholder="Agrega la marca" [(ngModel)] = "car.marca" name = "marca">
 	</div>
 
 		<div class="form-group">
 			<label for ="submarca">Submarca</label>
-			<input type="text" class="form-control" id="submarca" placeholder="Agrega la submarca" name = "submarca">
+			<input type="text" class="form-control" id="submarca" placeholder="Agrega la submarca" [(ngModel)] = "car.submarca" name = "submarca">
 	</div>
 
 			<div class="form-group">
 				<label for ="descripcion">Descripción</label>
-				<input type="text" class="form-control" id="descripcion" placeholder="Agrega la descripción"  name = "descripcion">
+				<input type="text" class="form-control" id="descripcion" placeholder="Agrega la descripción" [(ngModel)] = "car.descripcion" name = "descripcion">
 	</div>
 
 				<div class="form-group">
 					<label for ="modelos">Modelos</label>
-					<input type="text" class="form-control" id="modelos" placeholder="Agrega el/los modelo/ s" name = "modelos">
+					<input type="text" class="form-control" id="modelos" placeholder="Agrega el/los modelo/ s"[(ngModel)] = "car.modelos" name = "modelos">
 	</div>
 					<div class="modal-footer">
 						<button type="submit" class="btn btn-outline-dark" (click)="activeModal.close(car)"> Guardar </button>
