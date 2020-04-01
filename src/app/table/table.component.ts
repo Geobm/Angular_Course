@@ -46,13 +46,11 @@ export class TableComponent implements OnInit {
     )
   }
 
-  openModalAdd(car: Car) {
+  openModalAdd() {
     const modalRef = this.modalService.open(ModalAddCarComponent, {
       centered: true
     });
-    modalRef.componentInstance.car = car;
     modalRef.componentInstance.action = "Agregar";
-
     modalRef.result.then(car => {
         this.carService.addCars(car).subscribe(response =>{
          console.log(response);
