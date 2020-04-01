@@ -8,6 +8,6 @@ import { Car } from '../model';
   styleUrls: ['./modal-add-car.component.css']
 })
 export class ModalAddCarComponent {
-car : Car;
+car : Car = {} as Car;
   constructor(public activeModal: NgbActiveModal) { }
 }
