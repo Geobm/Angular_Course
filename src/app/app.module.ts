@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
+import { ModelsFormatPipe } from './models-format.pipe';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
+
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { VIewsComponent } from './views/views.component';
@@ -14,14 +18,13 @@ import { CarsService } from './Services/cars.service';
 import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.component';
 import { ModalConfirmActionComponent } from './modal-confirm-action/modal-confirm-action.component';
 import { ModalAddCarComponent } from './modal-add-car/modal-add-car.component';
-import { ModelsFormatPipe } from './models-format.pipe';
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, NgbModule, AppRoutingModule,HttpClientModule,],
+  imports:      [ BrowserModule, FormsModule, NgbModule, AppRoutingModule,HttpClientModule,Ng2SearchPipeModule],
   declarations: [ AppComponent, HeaderComponent, VIewsComponent, ListComponent, TableComponent, PageNotFoundComponent, ModalAddUpdateComponent, ModalConfirmActionComponent, ModalAddCarComponent, ModelsFormatPipe ],
   bootstrap:    [ AppComponent ],
   providers: [CarsService],
   entryComponents : [ModalAddUpdateComponent,ModalConfirmActionComponent,ModalAddCarComponent]
 })
 export class AppModule { }
- 
