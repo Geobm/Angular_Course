@@ -18,6 +18,7 @@ export class TableComponent implements OnInit {
   cars: Car[];
   selectedCar: Car;
   displayProgressBar: boolean;
+  searchText;
 
   constructor(
     private carService: CarsService,
