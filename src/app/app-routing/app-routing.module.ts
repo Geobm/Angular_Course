@@ -4,8 +4,13 @@ import { CommonModule } from '@angular/common';
 import { ListComponent } from '../List/list.component';
 import { TableComponent } from '../table/table.component'
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
+import { LogComponent } from '../log/log.component';
 
 const routes : Routes = [
+{
+  path:"",
+  component: ListComponent
+},
 {
   path : 'List',
   component: ListComponent
@@ -13,6 +18,10 @@ const routes : Routes = [
 {
   path :'table',
   component : TableComponent
+},
+{
+  path :'log',
+  component : LogComponent
 },
 {
 path : "**",
