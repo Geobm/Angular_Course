@@ -5,9 +5,9 @@
                 </button>
 </div>
 <div class ="modal-byody">
-  <p>Estas seguro que deseas eliminar el automovil? <span class ="text-dark">{{car.descripcion}}</span></p>
+  <p><span class ="text-danger"> Estas seguro que deseas eliminar el automovil? </span><br> <span class ="text-dark">{{car.descripcion}}</span></p>
 </div>
 <div class= "modal-footer">
-<button type ="button" class ="btn btn-outline-seconday" (click)= "activeModal.dismiss('cancel click')">Cancelar</button>
+<button type ="button" class ="btn btn-outline-secondary" (click)= "activeModal.dismiss('cancel click')">Cancelar</button>
 <button type ="button" class="btn btn-danger" (click) ="activeModal.close(car)">Eliminar </button>
 </div>

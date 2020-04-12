@@ -2,7 +2,6 @@
 {
     cursor: pointer;
 }
-
 .cars{
 
    list-style: none;
@@ -11,7 +10,7 @@
     padding: 10px;
     border-radius: 0.5em;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     font-size: medium;
     
 }
