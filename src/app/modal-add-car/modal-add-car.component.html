@@ -10,11 +10,14 @@
 	<form #formCars="ngForm" (ngSubmit)="onSubmit()">
 		<div class="form-group">
 			<label for ="marca">Marca</label>
-			<input type="text" class="form-control" id="brand" placeholder="Agrega la marca" [(ngModel)] = "car.marca" required name = "marca" #marca = "ngModel">
+			<input type="text" class="form-control" id="brand" placeholder="Agrega la marca" [(ngModel)] = "car.marca" required minlength="4" name = "marca" #marca = "ngModel" appForbiddenName="Toyota">
 	</div>
 
-			<div [hidden]="marca.valid || marca.pristine" class="alert alert-danger">
-				Se requiere ingresar una marca
+			<div *ngIf="marca.invalid && (marca.dirty || marca.touched)">
+				<div *ngIf="marca.errors.minlength" class="alert alert-danger">La marca debe tener minimo 4 caracteres
+				</div>
+				<div *ngIf="marca.errors.required" class="alert alert-danger">La marca es requerida</div>
+				<div *ngIf="marca.errors.forbiddenName" class="alert alert-danger">La marca Toyota es invalida</div>
 			</div>
 
 			<div class="form-group">
@@ -37,7 +40,8 @@
 					<div class="form-group">
 						<label for ="modelos">Modelos</label>
 						<input type="text" class="form-control" id="modelos" placeholder="Agrega el/los modelo/ s"[(ngModel)] = "car.modelos" name = "modelos">
-	</div>
+        	</div>
+
 						<div class="modal-footer">
 							<button type="submit" class="btn btn-outline-dark" [disabled]="!formCars.form.valid"> Guardar </button>
 						</div>
