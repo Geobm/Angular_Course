@@ -19,6 +19,7 @@ import { ModalConfirmActionComponent } from "./modal-confirm-action/modal-confir
 import { ModalAddCarComponent } from "./modal-add-car/modal-add-car.component";
 import { LogComponent } from "./log/log.component";
 import { MessageService } from "./Services/message.service";
+import { ForbiddenNameDirective } from './Directives/forbidden-name.directive';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { MessageService } from "./Services/message.service";
     ModalConfirmActionComponent,
     ModalAddCarComponent,
     ModelsFormatPipe,
-    LogComponent
+    LogComponent,
+    ForbiddenNameDirective
   ],
   bootstrap: [AppComponent],
   providers: [CarsService, MessageService],
