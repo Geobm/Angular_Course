@@ -10,4 +10,8 @@ import { Car } from '../model';
 export class ModalAddCarComponent {
 car : Car = {} as Car;
   constructor(public activeModal: NgbActiveModal) { }
+   onSubmit(){
+    this.activeModal.close(this.car);
+
+  }
 }
